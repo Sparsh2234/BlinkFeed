@@ -23,7 +23,6 @@ class SettingsController: UIViewController {
             DataManager.shared.selectedTopicsList = savedTopics
         }
     }
-    
 }
 
 

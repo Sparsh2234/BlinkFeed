@@ -72,6 +72,15 @@ extension TopHeadlinesFeedController: KolodaViewDelegate, KolodaViewDataSource {
         koloda.resetCurrentCardIndex()
     }
     
+    func koloda(_ koloda: KolodaView, shouldSwipeCardAt index: Int, in direction: SwipeResultDirection) -> Bool {
+        if direction == .down {
+            cardParentView.revertAction()
+            return false
+        }
+        
+        return true
+    }
+    
     func koloda(_ koloda: KolodaView, didSelectCardAt index: Int) {
         UIApplication.shared.open(apiData[index].url)
     }
@@ -81,6 +90,6 @@ extension TopHeadlinesFeedController: KolodaViewDelegate, KolodaViewDataSource {
     }
     
     func kolodaSwipeThresholdRatioMargin(_ koloda: KolodaView) -> CGFloat? {
-        0.2
+        0.1
     }
 }

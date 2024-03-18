@@ -13,6 +13,8 @@ class NewsCardView: UIView {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var blurView: UIVisualEffectView!
+    @IBOutlet weak var sourceLabel: UILabel!
+    @IBOutlet weak var authorLabel: UILabel!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -32,6 +34,16 @@ class NewsCardView: UIView {
         descriptionLabel.numberOfLines = 0
         blurView.layer.cornerRadius = 10
         imageView.layer.cornerRadius = 10
+        
+        sourceLabel.text = "Source: \(article.source.name)"
+        sourceLabel.textColor = .lightGray
+        sourceLabel.numberOfLines = 0
+        sourceLabel.font = UIFont.systemFont(ofSize: 10)
+        
+        authorLabel.text = "Author: \(article.author ?? "Unkown")"
+        authorLabel.textColor = .lightGray
+        authorLabel.numberOfLines = 0
+        authorLabel.font = UIFont.systemFont(ofSize: 10)
         
         if let imageUrl = article.urlToImage {
             loadImage(from: imageUrl)

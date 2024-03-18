@@ -26,6 +26,10 @@ class MyNewsController: UIViewController {
         }
         DataManager.shared.didChangeSelection = true
         print(DataManager.shared.selectedTopicsList)
+        
+        let swipeUpGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe(_:)))
+        swipeUpGestureRecognizer.direction = .down
+        cardParentView.addGestureRecognizer(swipeUpGestureRecognizer)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -90,6 +94,12 @@ class MyNewsController: UIViewController {
             }
         }
     }
+    
+    @objc func handleSwipe(_ gestureRecognizer: UISwipeGestureRecognizer) {
+        if gestureRecognizer.direction == .down {
+            print("here")
+        }
+    }
 }
 
 extension MyNewsController: KolodaViewDelegate, KolodaViewDataSource {
@@ -127,6 +137,15 @@ extension MyNewsController: KolodaViewDelegate, KolodaViewDataSource {
         }
     }
     
+    func koloda(_ koloda: KolodaView, shouldSwipeCardAt index: Int, in direction: SwipeResultDirection) -> Bool {
+        if direction == .down {
+            cardParentView.revertAction()
+            return false
+        }
+        
+        return true
+    }
+  
     func koloda(_ koloda: KolodaView, didSelectCardAt index: Int) {
         UIApplication.shared.open(apiData[index].url)
     }
@@ -136,6 +155,6 @@ extension MyNewsController: KolodaViewDelegate, KolodaViewDataSource {
     }
     
     func kolodaSwipeThresholdRatioMargin(_ koloda: KolodaView) -> CGFloat? {
-        0.2
+        0.1
     }
 }

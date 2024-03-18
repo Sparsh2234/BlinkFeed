@@ -91,7 +91,7 @@ public class DraggableCardView: UIView, UIGestureRecognizerDelegate {
             if let ratio = delegate?.card(cardSwipeThresholdRatioMargin: self) , ratio != 0 {
                 swipePercentageMargin = ratio
             } else {
-                swipePercentageMargin = 1.0
+                swipePercentageMargin = 0.1
             }
         }
     }

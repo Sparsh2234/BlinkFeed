@@ -45,11 +45,29 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U92-Ml-Xut">
+                                <rect key="frame" x="10" y="339" width="373" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MRN-u3-aCK">
+                                <rect key="frame" x="10" y="313" width="373" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="U92-Ml-Xut" firstAttribute="leading" secondItem="ZdJ-c1-jj9" secondAttribute="leading" constant="10" id="7m4-FF-Uif"/>
                             <constraint firstItem="LBI-Dm-T38" firstAttribute="top" secondItem="Jsk-eU-yVX" secondAttribute="bottom" constant="20" id="9Hl-sp-CMd"/>
+                            <constraint firstItem="U92-Ml-Xut" firstAttribute="top" secondItem="MRN-u3-aCK" secondAttribute="bottom" constant="5" id="Dga-9h-6Td"/>
                             <constraint firstItem="LBI-Dm-T38" firstAttribute="leading" secondItem="ZdJ-c1-jj9" secondAttribute="leading" constant="10" id="ORo-Uw-Fqr"/>
                             <constraint firstAttribute="trailing" secondItem="Jsk-eU-yVX" secondAttribute="trailing" id="Qqe-X4-NeW"/>
+                            <constraint firstAttribute="bottom" secondItem="U92-Ml-Xut" secondAttribute="bottom" constant="40" id="Qsk-CS-FmE"/>
+                            <constraint firstAttribute="trailing" secondItem="MRN-u3-aCK" secondAttribute="trailing" constant="10" id="RZ8-yE-P2Q"/>
+                            <constraint firstItem="MRN-u3-aCK" firstAttribute="leading" secondItem="ZdJ-c1-jj9" secondAttribute="leading" constant="10" id="StA-dQ-aco"/>
+                            <constraint firstAttribute="trailing" secondItem="U92-Ml-Xut" secondAttribute="trailing" constant="10" id="f7m-9f-3tC"/>
                             <constraint firstItem="Jsk-eU-yVX" firstAttribute="top" secondItem="ZdJ-c1-jj9" secondAttribute="top" constant="30" id="qgI-4M-gIS"/>
                             <constraint firstItem="Jsk-eU-yVX" firstAttribute="leading" secondItem="ZdJ-c1-jj9" secondAttribute="leading" constant="10" id="slE-kK-9jP"/>
                             <constraint firstAttribute="trailing" secondItem="LBI-Dm-T38" secondAttribute="trailing" id="ygo-Kt-cqb"/>
@@ -73,9 +91,11 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="authorLabel" destination="U92-Ml-Xut" id="BSO-VS-kkz"/>
                 <outlet property="blurView" destination="IMP-rV-TlR" id="gfU-gA-1Hs"/>
                 <outlet property="descriptionLabel" destination="LBI-Dm-T38" id="SeL-Vh-MJJ"/>
                 <outlet property="imageView" destination="kGA-Rd-YAQ" id="M4g-lz-XOI"/>
+                <outlet property="sourceLabel" destination="MRN-u3-aCK" id="nti-qA-3Ti"/>
                 <outlet property="titleLabel" destination="Jsk-eU-yVX" id="AWu-R2-FHW"/>
             </connections>
             <point key="canvasLocation" x="-8" y="20"/>
