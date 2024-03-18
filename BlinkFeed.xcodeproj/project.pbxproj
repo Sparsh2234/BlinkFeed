@@ -1,0 +1,782 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0762B304B085F727D8D5981A /* Pods_BlinkFeedTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30B4A6256099529CC93409CA /* Pods_BlinkFeedTests.framework */; };
+		596A846C93731AD6C1EE3648 /* Pods_BlinkFeed_BlinkFeedUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8591B03517D2E78107035B3 /* Pods_BlinkFeed_BlinkFeedUITests.framework */; };
+		88C6BF7A8ABBC4DE1B4EAEEE /* Pods_BlinkFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8698D75FA7446E5C23FDA92 /* Pods_BlinkFeed.framework */; };
+		9F1DC8DC2BA6B6B000A9E127 /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1DC8DB2BA6B6B000A9E127 /* NetworkingManager.swift */; };
+		9F1DC8DE2BA6BCF100A9E127 /* NewsCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1DC8DD2BA6BCF100A9E127 /* NewsCardView.swift */; };
+		9F1DC8E02BA6D09800A9E127 /* NewsCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F1DC8DF2BA6D09800A9E127 /* NewsCardView.xib */; };
+		9F1DC8E22BA7445400A9E127 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1DC8E12BA7445400A9E127 /* SettingsController.swift */; };
+		9F764C542BA6A1D3005C8576 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F764C532BA6A1D3005C8576 /* AppDelegate.swift */; };
+		9F764C562BA6A1D3005C8576 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F764C552BA6A1D3005C8576 /* SceneDelegate.swift */; };
+		9F764C582BA6A1D3005C8576 /* NewsFeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F764C572BA6A1D3005C8576 /* NewsFeedController.swift */; };
+		9F764C5B2BA6A1D3005C8576 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 9F764C5A2BA6A1D3005C8576 /* Base */; };
+		9F764C5D2BA6A1D4005C8576 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F764C5C2BA6A1D4005C8576 /* Assets.xcassets */; };
+		9F764C602BA6A1D4005C8576 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 9F764C5F2BA6A1D4005C8576 /* Base */; };
+		9F764C6B2BA6A1D4005C8576 /* BlinkFeedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F764C6A2BA6A1D4005C8576 /* BlinkFeedTests.swift */; };
+		9F764C752BA6A1D4005C8576 /* BlinkFeedUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F764C742BA6A1D4005C8576 /* BlinkFeedUITests.swift */; };
+		9F764C772BA6A1D4005C8576 /* BlinkFeedUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F764C762BA6A1D4005C8576 /* BlinkFeedUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9F764C672BA6A1D4005C8576 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F764C482BA6A1D3005C8576 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9F764C4F2BA6A1D3005C8576;
+			remoteInfo = BlinkFeed;
+		};
+		9F764C712BA6A1D4005C8576 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F764C482BA6A1D3005C8576 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9F764C4F2BA6A1D3005C8576;
+			remoteInfo = BlinkFeed;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		30B4A6256099529CC93409CA /* Pods_BlinkFeedTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlinkFeedTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FAC8F8B50FA374BC6F7D4F9 /* Pods-BlinkFeedTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlinkFeedTests.debug.xcconfig"; path = "Target Support Files/Pods-BlinkFeedTests/Pods-BlinkFeedTests.debug.xcconfig"; sourceTree = "<group>"; };
+		54FA1847E3BD20C253DA56AE /* Pods-BlinkFeed-BlinkFeedUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlinkFeed-BlinkFeedUITests.debug.xcconfig"; path = "Target Support Files/Pods-BlinkFeed-BlinkFeedUITests/Pods-BlinkFeed-BlinkFeedUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8287F7CEC649E8066652DFCB /* Pods-BlinkFeed.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlinkFeed.debug.xcconfig"; path = "Target Support Files/Pods-BlinkFeed/Pods-BlinkFeed.debug.xcconfig"; sourceTree = "<group>"; };
+		8A657891A1D07F1B4D3ED018 /* Pods-BlinkFeedTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlinkFeedTests.release.xcconfig"; path = "Target Support Files/Pods-BlinkFeedTests/Pods-BlinkFeedTests.release.xcconfig"; sourceTree = "<group>"; };
+		9F1DC8DB2BA6B6B000A9E127 /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
+		9F1DC8DD2BA6BCF100A9E127 /* NewsCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCardView.swift; sourceTree = "<group>"; };
+		9F1DC8DF2BA6D09800A9E127 /* NewsCardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsCardView.xib; sourceTree = "<group>"; };
+		9F1DC8E12BA7445400A9E127 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
+		9F764C502BA6A1D3005C8576 /* BlinkFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlinkFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F764C532BA6A1D3005C8576 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9F764C552BA6A1D3005C8576 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		9F764C572BA6A1D3005C8576 /* NewsFeedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedController.swift; sourceTree = "<group>"; };
+		9F764C5A2BA6A1D3005C8576 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9F764C5C2BA6A1D4005C8576 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9F764C5F2BA6A1D4005C8576 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9F764C612BA6A1D4005C8576 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F764C662BA6A1D4005C8576 /* BlinkFeedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlinkFeedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F764C6A2BA6A1D4005C8576 /* BlinkFeedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlinkFeedTests.swift; sourceTree = "<group>"; };
+		9F764C702BA6A1D4005C8576 /* BlinkFeedUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlinkFeedUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F764C742BA6A1D4005C8576 /* BlinkFeedUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlinkFeedUITests.swift; sourceTree = "<group>"; };
+		9F764C762BA6A1D4005C8576 /* BlinkFeedUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlinkFeedUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C8698D75FA7446E5C23FDA92 /* Pods_BlinkFeed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlinkFeed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFFB8C6A0CD23FE1D3150AA4 /* Pods-BlinkFeed-BlinkFeedUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlinkFeed-BlinkFeedUITests.release.xcconfig"; path = "Target Support Files/Pods-BlinkFeed-BlinkFeedUITests/Pods-BlinkFeed-BlinkFeedUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F3171AE1E69F5B8FCB49BBD5 /* Pods-BlinkFeed.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlinkFeed.release.xcconfig"; path = "Target Support Files/Pods-BlinkFeed/Pods-BlinkFeed.release.xcconfig"; sourceTree = "<group>"; };
+		F8591B03517D2E78107035B3 /* Pods_BlinkFeed_BlinkFeedUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlinkFeed_BlinkFeedUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9F764C4D2BA6A1D3005C8576 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88C6BF7A8ABBC4DE1B4EAEEE /* Pods_BlinkFeed.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F764C632BA6A1D4005C8576 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0762B304B085F727D8D5981A /* Pods_BlinkFeedTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F764C6D2BA6A1D4005C8576 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				596A846C93731AD6C1EE3648 /* Pods_BlinkFeed_BlinkFeedUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		75625AF8987089603FA36D44 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8287F7CEC649E8066652DFCB /* Pods-BlinkFeed.debug.xcconfig */,
+				F3171AE1E69F5B8FCB49BBD5 /* Pods-BlinkFeed.release.xcconfig */,
+				54FA1847E3BD20C253DA56AE /* Pods-BlinkFeed-BlinkFeedUITests.debug.xcconfig */,
+				CFFB8C6A0CD23FE1D3150AA4 /* Pods-BlinkFeed-BlinkFeedUITests.release.xcconfig */,
+				3FAC8F8B50FA374BC6F7D4F9 /* Pods-BlinkFeedTests.debug.xcconfig */,
+				8A657891A1D07F1B4D3ED018 /* Pods-BlinkFeedTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		9F764C472BA6A1D3005C8576 = {
+			isa = PBXGroup;
+			children = (
+				9F764C522BA6A1D3005C8576 /* BlinkFeed */,
+				9F764C692BA6A1D4005C8576 /* BlinkFeedTests */,
+				9F764C732BA6A1D4005C8576 /* BlinkFeedUITests */,
+				9F764C512BA6A1D3005C8576 /* Products */,
+				75625AF8987089603FA36D44 /* Pods */,
+				C1BA4AB054F249556E618981 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		9F764C512BA6A1D3005C8576 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9F764C502BA6A1D3005C8576 /* BlinkFeed.app */,
+				9F764C662BA6A1D4005C8576 /* BlinkFeedTests.xctest */,
+				9F764C702BA6A1D4005C8576 /* BlinkFeedUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9F764C522BA6A1D3005C8576 /* BlinkFeed */ = {
+			isa = PBXGroup;
+			children = (
+				9F764C532BA6A1D3005C8576 /* AppDelegate.swift */,
+				9F764C552BA6A1D3005C8576 /* SceneDelegate.swift */,
+				9F764C572BA6A1D3005C8576 /* NewsFeedController.swift */,
+				9F764C592BA6A1D3005C8576 /* Main.storyboard */,
+				9F764C5C2BA6A1D4005C8576 /* Assets.xcassets */,
+				9F764C5E2BA6A1D4005C8576 /* LaunchScreen.storyboard */,
+				9F764C612BA6A1D4005C8576 /* Info.plist */,
+				9F1DC8DB2BA6B6B000A9E127 /* NetworkingManager.swift */,
+				9F1DC8DD2BA6BCF100A9E127 /* NewsCardView.swift */,
+				9F1DC8DF2BA6D09800A9E127 /* NewsCardView.xib */,
+				9F1DC8E12BA7445400A9E127 /* SettingsController.swift */,
+			);
+			path = BlinkFeed;
+			sourceTree = "<group>";
+		};
+		9F764C692BA6A1D4005C8576 /* BlinkFeedTests */ = {
+			isa = PBXGroup;
+			children = (
+				9F764C6A2BA6A1D4005C8576 /* BlinkFeedTests.swift */,
+			);
+			path = BlinkFeedTests;
+			sourceTree = "<group>";
+		};
+		9F764C732BA6A1D4005C8576 /* BlinkFeedUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9F764C742BA6A1D4005C8576 /* BlinkFeedUITests.swift */,
+				9F764C762BA6A1D4005C8576 /* BlinkFeedUITestsLaunchTests.swift */,
+			);
+			path = BlinkFeedUITests;
+			sourceTree = "<group>";
+		};
+		C1BA4AB054F249556E618981 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C8698D75FA7446E5C23FDA92 /* Pods_BlinkFeed.framework */,
+				F8591B03517D2E78107035B3 /* Pods_BlinkFeed_BlinkFeedUITests.framework */,
+				30B4A6256099529CC93409CA /* Pods_BlinkFeedTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9F764C4F2BA6A1D3005C8576 /* BlinkFeed */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F764C7A2BA6A1D4005C8576 /* Build configuration list for PBXNativeTarget "BlinkFeed" */;
+			buildPhases = (
+				D9D2EF694FD7A639A79AA85F /* [CP] Check Pods Manifest.lock */,
+				9F764C4C2BA6A1D3005C8576 /* Sources */,
+				9F764C4D2BA6A1D3005C8576 /* Frameworks */,
+				9F764C4E2BA6A1D3005C8576 /* Resources */,
+				D57C3F66F05514B1A7F0B3A1 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BlinkFeed;
+			productName = BlinkFeed;
+			productReference = 9F764C502BA6A1D3005C8576 /* BlinkFeed.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9F764C652BA6A1D4005C8576 /* BlinkFeedTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F764C7D2BA6A1D4005C8576 /* Build configuration list for PBXNativeTarget "BlinkFeedTests" */;
+			buildPhases = (
+				BBED9C78139874E116995D2C /* [CP] Check Pods Manifest.lock */,
+				9F764C622BA6A1D4005C8576 /* Sources */,
+				9F764C632BA6A1D4005C8576 /* Frameworks */,
+				9F764C642BA6A1D4005C8576 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9F764C682BA6A1D4005C8576 /* PBXTargetDependency */,
+			);
+			name = BlinkFeedTests;
+			productName = BlinkFeedTests;
+			productReference = 9F764C662BA6A1D4005C8576 /* BlinkFeedTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9F764C6F2BA6A1D4005C8576 /* BlinkFeedUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F764C802BA6A1D4005C8576 /* Build configuration list for PBXNativeTarget "BlinkFeedUITests" */;
+			buildPhases = (
+				E41052BD90AC0B32B02322F8 /* [CP] Check Pods Manifest.lock */,
+				9F764C6C2BA6A1D4005C8576 /* Sources */,
+				9F764C6D2BA6A1D4005C8576 /* Frameworks */,
+				9F764C6E2BA6A1D4005C8576 /* Resources */,
+				DCF3709EED3BF5FFFE259D62 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9F764C722BA6A1D4005C8576 /* PBXTargetDependency */,
+			);
+			name = BlinkFeedUITests;
+			productName = BlinkFeedUITests;
+			productReference = 9F764C702BA6A1D4005C8576 /* BlinkFeedUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9F764C482BA6A1D3005C8576 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					9F764C4F2BA6A1D3005C8576 = {
+						CreatedOnToolsVersion = 15.3;
+					};
+					9F764C652BA6A1D4005C8576 = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = 9F764C4F2BA6A1D3005C8576;
+					};
+					9F764C6F2BA6A1D4005C8576 = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = 9F764C4F2BA6A1D3005C8576;
+					};
+				};
+			};
+			buildConfigurationList = 9F764C4B2BA6A1D3005C8576 /* Build configuration list for PBXProject "BlinkFeed" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9F764C472BA6A1D3005C8576;
+			productRefGroup = 9F764C512BA6A1D3005C8576 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9F764C4F2BA6A1D3005C8576 /* BlinkFeed */,
+				9F764C652BA6A1D4005C8576 /* BlinkFeedTests */,
+				9F764C6F2BA6A1D4005C8576 /* BlinkFeedUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9F764C4E2BA6A1D3005C8576 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F764C5D2BA6A1D4005C8576 /* Assets.xcassets in Resources */,
+				9F764C602BA6A1D4005C8576 /* Base in Resources */,
+				9F764C5B2BA6A1D3005C8576 /* Base in Resources */,
+				9F1DC8E02BA6D09800A9E127 /* NewsCardView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F764C642BA6A1D4005C8576 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F764C6E2BA6A1D4005C8576 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BBED9C78139874E116995D2C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BlinkFeedTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D57C3F66F05514B1A7F0B3A1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BlinkFeed/Pods-BlinkFeed-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BlinkFeed/Pods-BlinkFeed-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BlinkFeed/Pods-BlinkFeed-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D9D2EF694FD7A639A79AA85F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BlinkFeed-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DCF3709EED3BF5FFFE259D62 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BlinkFeed-BlinkFeedUITests/Pods-BlinkFeed-BlinkFeedUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BlinkFeed-BlinkFeedUITests/Pods-BlinkFeed-BlinkFeedUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BlinkFeed-BlinkFeedUITests/Pods-BlinkFeed-BlinkFeedUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E41052BD90AC0B32B02322F8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BlinkFeed-BlinkFeedUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9F764C4C2BA6A1D3005C8576 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F1DC8E22BA7445400A9E127 /* SettingsController.swift in Sources */,
+				9F1DC8DE2BA6BCF100A9E127 /* NewsCardView.swift in Sources */,
+				9F764C582BA6A1D3005C8576 /* NewsFeedController.swift in Sources */,
+				9F1DC8DC2BA6B6B000A9E127 /* NetworkingManager.swift in Sources */,
+				9F764C542BA6A1D3005C8576 /* AppDelegate.swift in Sources */,
+				9F764C562BA6A1D3005C8576 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F764C622BA6A1D4005C8576 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F764C6B2BA6A1D4005C8576 /* BlinkFeedTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F764C6C2BA6A1D4005C8576 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F764C752BA6A1D4005C8576 /* BlinkFeedUITests.swift in Sources */,
+				9F764C772BA6A1D4005C8576 /* BlinkFeedUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9F764C682BA6A1D4005C8576 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9F764C4F2BA6A1D3005C8576 /* BlinkFeed */;
+			targetProxy = 9F764C672BA6A1D4005C8576 /* PBXContainerItemProxy */;
+		};
+		9F764C722BA6A1D4005C8576 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9F764C4F2BA6A1D3005C8576 /* BlinkFeed */;
+			targetProxy = 9F764C712BA6A1D4005C8576 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9F764C592BA6A1D3005C8576 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9F764C5A2BA6A1D3005C8576 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9F764C5E2BA6A1D4005C8576 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9F764C5F2BA6A1D4005C8576 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9F764C782BA6A1D4005C8576 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9F764C792BA6A1D4005C8576 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9F764C7B2BA6A1D4005C8576 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8287F7CEC649E8066652DFCB /* Pods-BlinkFeed.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 647A98ZM9A;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BlinkFeed/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = sparsh.BlinkFeed;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9F764C7C2BA6A1D4005C8576 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3171AE1E69F5B8FCB49BBD5 /* Pods-BlinkFeed.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 647A98ZM9A;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BlinkFeed/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = sparsh.BlinkFeed;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9F764C7E2BA6A1D4005C8576 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3FAC8F8B50FA374BC6F7D4F9 /* Pods-BlinkFeedTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 647A98ZM9A;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = sparsh.BlinkFeedTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BlinkFeed.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BlinkFeed";
+			};
+			name = Debug;
+		};
+		9F764C7F2BA6A1D4005C8576 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A657891A1D07F1B4D3ED018 /* Pods-BlinkFeedTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 647A98ZM9A;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = sparsh.BlinkFeedTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BlinkFeed.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BlinkFeed";
+			};
+			name = Release;
+		};
+		9F764C812BA6A1D4005C8576 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 54FA1847E3BD20C253DA56AE /* Pods-BlinkFeed-BlinkFeedUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 647A98ZM9A;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = sparsh.BlinkFeedUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BlinkFeed;
+			};
+			name = Debug;
+		};
+		9F764C822BA6A1D4005C8576 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CFFB8C6A0CD23FE1D3150AA4 /* Pods-BlinkFeed-BlinkFeedUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 647A98ZM9A;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = sparsh.BlinkFeedUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BlinkFeed;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9F764C4B2BA6A1D3005C8576 /* Build configuration list for PBXProject "BlinkFeed" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F764C782BA6A1D4005C8576 /* Debug */,
+				9F764C792BA6A1D4005C8576 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9F764C7A2BA6A1D4005C8576 /* Build configuration list for PBXNativeTarget "BlinkFeed" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F764C7B2BA6A1D4005C8576 /* Debug */,
+				9F764C7C2BA6A1D4005C8576 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9F764C7D2BA6A1D4005C8576 /* Build configuration list for PBXNativeTarget "BlinkFeedTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F764C7E2BA6A1D4005C8576 /* Debug */,
+				9F764C7F2BA6A1D4005C8576 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9F764C802BA6A1D4005C8576 /* Build configuration list for PBXNativeTarget "BlinkFeedUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F764C812BA6A1D4005C8576 /* Debug */,
+				9F764C822BA6A1D4005C8576 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9F764C482BA6A1D3005C8576 /* Project object */;
+}

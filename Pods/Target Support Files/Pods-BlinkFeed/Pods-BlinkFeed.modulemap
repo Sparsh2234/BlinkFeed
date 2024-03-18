@@ -1,0 +1,6 @@
+framework module Pods_BlinkFeed {
+  umbrella header "Pods-BlinkFeed-umbrella.h"
+
+  export *
+  module * { export * }
+}
