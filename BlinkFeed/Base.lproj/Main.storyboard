@@ -168,10 +168,10 @@
             </objects>
             <point key="canvasLocation" x="2758" y="782"/>
         </scene>
-        <!--Top Headlines Feed Controller-->
+        <!--My News Controller-->
         <scene sceneID="YkY-AD-0gd">
             <objects>
-                <viewController id="jzf-Un-7L4" customClass="TopHeadlinesFeedController" customModule="BlinkFeed" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="jzf-Un-7L4" customClass="MyNewsController" customModule="BlinkFeed" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="bm5-74-3KO">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -192,7 +192,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="FFT-aJ-6D1"/>
                     <connections>
-                        <outlet property="cardParentView" destination="Bdx-e9-R5q" id="uiN-yG-LKK"/>
+                        <outlet property="cardParentView" destination="Bdx-e9-R5q" id="cpQ-AW-uig"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0k4-n6-NHX" sceneMemberID="firstResponder"/>

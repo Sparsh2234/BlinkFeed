@@ -48,15 +48,6 @@ class TopHeadlinesFeedController: UIViewController {
             }
         }
     }
-    
-    @objc func handleSwipe(_ gestureRecognizer: UISwipeGestureRecognizer) {
-        if gestureRecognizer.direction == .up {
-            print("here")
-            let modalViewController = SettingsController()
-            modalViewController.modalPresentationStyle = .overFullScreen
-            present(modalViewController, animated: true, completion: nil)
-        }
-    }
 }
 
 extension TopHeadlinesFeedController: KolodaViewDelegate, KolodaViewDataSource {

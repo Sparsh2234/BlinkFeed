@@ -10,13 +10,14 @@
 		0762B304B085F727D8D5981A /* Pods_BlinkFeedTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30B4A6256099529CC93409CA /* Pods_BlinkFeedTests.framework */; };
 		596A846C93731AD6C1EE3648 /* Pods_BlinkFeed_BlinkFeedUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8591B03517D2E78107035B3 /* Pods_BlinkFeed_BlinkFeedUITests.framework */; };
 		88C6BF7A8ABBC4DE1B4EAEEE /* Pods_BlinkFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8698D75FA7446E5C23FDA92 /* Pods_BlinkFeed.framework */; };
+		9F170E1A2BA7EC8E005385C1 /* MyNewsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F170E192BA7EC8E005385C1 /* MyNewsController.swift */; };
 		9F1DC8DC2BA6B6B000A9E127 /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1DC8DB2BA6B6B000A9E127 /* NetworkingManager.swift */; };
 		9F1DC8DE2BA6BCF100A9E127 /* NewsCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1DC8DD2BA6BCF100A9E127 /* NewsCardView.swift */; };
 		9F1DC8E02BA6D09800A9E127 /* NewsCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F1DC8DF2BA6D09800A9E127 /* NewsCardView.xib */; };
 		9F1DC8E22BA7445400A9E127 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1DC8E12BA7445400A9E127 /* SettingsController.swift */; };
+		9F5ED9E82BA7EB9800FE44D5 /* TopHeadlinesFeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5ED9E72BA7EB9800FE44D5 /* TopHeadlinesFeedController.swift */; };
 		9F764C542BA6A1D3005C8576 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F764C532BA6A1D3005C8576 /* AppDelegate.swift */; };
 		9F764C562BA6A1D3005C8576 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F764C552BA6A1D3005C8576 /* SceneDelegate.swift */; };
-		9F764C582BA6A1D3005C8576 /* NewsFeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F764C572BA6A1D3005C8576 /* NewsFeedController.swift */; };
 		9F764C5B2BA6A1D3005C8576 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 9F764C5A2BA6A1D3005C8576 /* Base */; };
 		9F764C5D2BA6A1D4005C8576 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F764C5C2BA6A1D4005C8576 /* Assets.xcassets */; };
 		9F764C602BA6A1D4005C8576 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 9F764C5F2BA6A1D4005C8576 /* Base */; };
@@ -48,14 +49,15 @@
 		54FA1847E3BD20C253DA56AE /* Pods-BlinkFeed-BlinkFeedUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlinkFeed-BlinkFeedUITests.debug.xcconfig"; path = "Target Support Files/Pods-BlinkFeed-BlinkFeedUITests/Pods-BlinkFeed-BlinkFeedUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8287F7CEC649E8066652DFCB /* Pods-BlinkFeed.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlinkFeed.debug.xcconfig"; path = "Target Support Files/Pods-BlinkFeed/Pods-BlinkFeed.debug.xcconfig"; sourceTree = "<group>"; };
 		8A657891A1D07F1B4D3ED018 /* Pods-BlinkFeedTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlinkFeedTests.release.xcconfig"; path = "Target Support Files/Pods-BlinkFeedTests/Pods-BlinkFeedTests.release.xcconfig"; sourceTree = "<group>"; };
+		9F170E192BA7EC8E005385C1 /* MyNewsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNewsController.swift; sourceTree = "<group>"; };
 		9F1DC8DB2BA6B6B000A9E127 /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
 		9F1DC8DD2BA6BCF100A9E127 /* NewsCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCardView.swift; sourceTree = "<group>"; };
 		9F1DC8DF2BA6D09800A9E127 /* NewsCardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsCardView.xib; sourceTree = "<group>"; };
 		9F1DC8E12BA7445400A9E127 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
+		9F5ED9E72BA7EB9800FE44D5 /* TopHeadlinesFeedController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopHeadlinesFeedController.swift; sourceTree = "<group>"; };
 		9F764C502BA6A1D3005C8576 /* BlinkFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlinkFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F764C532BA6A1D3005C8576 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F764C552BA6A1D3005C8576 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9F764C572BA6A1D3005C8576 /* NewsFeedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedController.swift; sourceTree = "<group>"; };
 		9F764C5A2BA6A1D3005C8576 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9F764C5C2BA6A1D4005C8576 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F764C5F2BA6A1D4005C8576 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -139,7 +141,7 @@
 			children = (
 				9F764C532BA6A1D3005C8576 /* AppDelegate.swift */,
 				9F764C552BA6A1D3005C8576 /* SceneDelegate.swift */,
-				9F764C572BA6A1D3005C8576 /* NewsFeedController.swift */,
+				9F5ED9E72BA7EB9800FE44D5 /* TopHeadlinesFeedController.swift */,
 				9F764C592BA6A1D3005C8576 /* Main.storyboard */,
 				9F764C5C2BA6A1D4005C8576 /* Assets.xcassets */,
 				9F764C5E2BA6A1D4005C8576 /* LaunchScreen.storyboard */,
@@ -148,6 +150,7 @@
 				9F1DC8DD2BA6BCF100A9E127 /* NewsCardView.swift */,
 				9F1DC8DF2BA6D09800A9E127 /* NewsCardView.xib */,
 				9F1DC8E12BA7445400A9E127 /* SettingsController.swift */,
+				9F170E192BA7EC8E005385C1 /* MyNewsController.swift */,
 			);
 			path = BlinkFeed;
 			sourceTree = "<group>";
@@ -421,9 +424,10 @@
 			files = (
 				9F1DC8E22BA7445400A9E127 /* SettingsController.swift in Sources */,
 				9F1DC8DE2BA6BCF100A9E127 /* NewsCardView.swift in Sources */,
-				9F764C582BA6A1D3005C8576 /* NewsFeedController.swift in Sources */,
+				9F170E1A2BA7EC8E005385C1 /* MyNewsController.swift in Sources */,
 				9F1DC8DC2BA6B6B000A9E127 /* NetworkingManager.swift in Sources */,
 				9F764C542BA6A1D3005C8576 /* AppDelegate.swift in Sources */,
+				9F5ED9E82BA7EB9800FE44D5 /* TopHeadlinesFeedController.swift in Sources */,
 				9F764C562BA6A1D3005C8576 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
