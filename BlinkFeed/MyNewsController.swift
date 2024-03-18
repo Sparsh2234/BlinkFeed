@@ -22,9 +22,27 @@ class MyNewsController: UIViewController {
         cardParentView.dataSource = self
     }
     
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        
+        if DataManager.shared.selectedTopicsList.count == 0 && cardParentView.isRunOutOfCards {
+            let label = UILabel()
+            label.text = "Please Select News Topics in Preferences"
+            label.textColor = .white
+            label.translatesAutoresizingMaskIntoConstraints = false
+            self.view.addSubview(label)
+            
+            NSLayoutConstraint.activate([
+                label.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+                label.centerYAnchor.constraint(equalTo: self.view.centerYAnchor)
+            ])
+        } else {
+            view.subviews.forEach { subview in
+                        if subview is UILabel {
+                            subview.removeFromSuperview()
+                        }
+                    }
+        }
         
         if DataManager.shared.didChangeSelection {
             DataManager.shared.didChangeSelection = false
@@ -44,6 +62,7 @@ class MyNewsController: UIViewController {
                                 if description.count < 60 {
                                     return false
                                 }
+                                
                                 return true
                             }
                             
@@ -72,7 +91,6 @@ extension MyNewsController: KolodaViewDelegate, KolodaViewDataSource {
         let cardView = Bundle.main.loadNibNamed("NewsCardView", owner: self, options: nil)?.first as! NewsCardView
         
         if apiData.count > 0 {
-            
             let articleItem = apiData[index]
             cardView.configure(with: articleItem)
             cardView.layer.cornerRadius = 10
@@ -87,7 +105,20 @@ extension MyNewsController: KolodaViewDelegate, KolodaViewDataSource {
     }
     
     func kolodaDidRunOutOfCards(_ koloda: KolodaView) {
-        koloda.resetCurrentCardIndex()
+        if DataManager.shared.selectedTopicsList.count == 0 {
+            let label = UILabel()
+            label.text = "Please Select News Topics in Preferences"
+            label.textColor = .white
+            label.translatesAutoresizingMaskIntoConstraints = false
+            self.view.addSubview(label)
+            
+            NSLayoutConstraint.activate([
+                label.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+                label.centerYAnchor.constraint(equalTo: self.view.centerYAnchor)
+            ])
+        } else {
+            koloda.resetCurrentCardIndex()
+        }
     }
     
     func koloda(_ koloda: KolodaView, shouldSwipeCardAt index: Int, in direction: SwipeResultDirection) -> Bool {
@@ -95,7 +126,7 @@ extension MyNewsController: KolodaViewDelegate, KolodaViewDataSource {
     }
     
     func kolodaNumberOfCards(_ koloda: Koloda.KolodaView) -> Int {
-        self.apiData.count
+        return self.apiData.count
     }
     
     func kolodaSwipeThresholdRatioMargin(_ koloda: KolodaView) -> CGFloat? {
