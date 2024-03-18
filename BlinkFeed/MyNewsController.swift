@@ -28,7 +28,7 @@ class MyNewsController: UIViewController {
         if DataManager.shared.selectedTopicsList.count == 0 && cardParentView.isRunOutOfCards {
             let label = UILabel()
             label.text = "Please Select News Topics in Preferences"
-            label.textColor = .white
+            label.textColor = .lightGray
             label.translatesAutoresizingMaskIntoConstraints = false
             self.view.addSubview(label)
             
