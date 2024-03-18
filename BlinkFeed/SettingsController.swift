@@ -18,6 +18,10 @@ class SettingsController: UIViewController {
         
         preferencesTableView.delegate = self
         preferencesTableView.dataSource = self
+        
+        if let savedTopics = UserDefaults.standard.array(forKey: "SelectedTopics") as? [String] {
+            DataManager.shared.selectedTopicsList = savedTopics
+        }
     }
     
 }
@@ -38,6 +42,13 @@ extension SettingsController: UITableViewDelegate, UITableViewDataSource {
         toggle.tag = indexPath.row
         toggle.addTarget(self, action: #selector(didTapToggle), for: .touchUpInside)
         cell.accessoryView = toggle
+        
+        if DataManager.shared.selectedTopicsList.contains(optionsList[indexPath.row]) {
+            toggle.isOn = true
+        } else {
+            toggle.isOn = false
+        }
+        
         return cell
     }
     
@@ -50,5 +61,6 @@ extension SettingsController: UITableViewDelegate, UITableViewDataSource {
         } else {
             DataManager.shared.selectedTopicsList.remove(at: DataManager.shared.selectedTopicsList.firstIndex(of: labelText)!)
         }
+        UserDefaults.standard.set(DataManager.shared.selectedTopicsList, forKey: "SelectedTopics")
     }
 }

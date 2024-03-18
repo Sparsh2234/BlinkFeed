@@ -55,7 +55,6 @@ extension TopHeadlinesFeedController: KolodaViewDelegate, KolodaViewDataSource {
         let cardView = Bundle.main.loadNibNamed("NewsCardView", owner: self, options: nil)?.first as! NewsCardView
         
         if apiData.count > 0 {
-            
             let articleItem = apiData[index]
             cardView.configure(with: articleItem)
             cardView.layer.cornerRadius = 10

@@ -20,6 +20,12 @@ class MyNewsController: UIViewController {
         super.viewDidLoad()
         cardParentView.delegate = self
         cardParentView.dataSource = self
+        
+        if let savedTopics = UserDefaults.standard.array(forKey: "SelectedTopics") as? [String] {
+            DataManager.shared.selectedTopicsList = savedTopics
+        }
+        DataManager.shared.didChangeSelection = true
+        print(DataManager.shared.selectedTopicsList)
     }
     
     override func viewWillAppear(_ animated: Bool) {
