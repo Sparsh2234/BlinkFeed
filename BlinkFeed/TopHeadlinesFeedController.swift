@@ -73,8 +73,8 @@ extension TopHeadlinesFeedController: KolodaViewDelegate, KolodaViewDataSource {
         koloda.resetCurrentCardIndex()
     }
     
-    func koloda(_ koloda: KolodaView, shouldSwipeCardAt index: Int, in direction: SwipeResultDirection) -> Bool {
-        return true
+    func koloda(_ koloda: KolodaView, didSelectCardAt index: Int) {
+        UIApplication.shared.open(apiData[index].url)
     }
     
     func kolodaNumberOfCards(_ koloda: Koloda.KolodaView) -> Int {
