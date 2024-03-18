@@ -54,4 +54,45 @@ class NetworkingManager {
         }
         task.resume()
     }
+    
+    func fetchDataFor(keyword: String, completion: @escaping (Result<Data, Error>) -> Void) {
+        let baseUrl = "https://newsapi.org/v2/everything"
+        let apiKey = "476ce120c9f142e1b96561ccf8cb064c"
+        let query = keyword.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+        let urlString = "\(baseUrl)?q=\(query)&apiKey=\(apiKey)"
+        
+        guard let url = URL(string: urlString) else {
+            print("Invalid URL")
+            completion(.failure(NSError(domain: "Invalid URL", code: 0, userInfo: nil)))
+            return
+        }
+        
+        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+            if let error = error {
+                print("Error fetching data for \(keyword): \(error)")
+                completion(.failure(error))
+                return
+            }
+            
+            guard let httpResponse = response as? HTTPURLResponse, (200...299).contains(httpResponse.statusCode) else {
+                print("Invalid response for \(keyword)")
+                let error = NSError(domain: "Invalid response", code: 0, userInfo: nil)
+                completion(.failure(error))
+                return
+            }
+            
+            guard let data = data else {
+                print("No data received for \(keyword)")
+                let error = NSError(domain: "No data received", code: 0, userInfo: nil)
+                completion(.failure(error))
+                return
+            }
+            
+            completion(.success(data))
+        }
+        task.resume()
+    }
+
+    
+    
 }

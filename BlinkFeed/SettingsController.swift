@@ -12,7 +12,7 @@ class SettingsController: UIViewController {
     @IBOutlet weak var preferencesTableView: UITableView!
     
     var optionsList = ["Politics", "Business", "Technology", "Entertainment", "Sports", "Health", "Science"]
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -35,18 +35,20 @@ extension SettingsController: UITableViewDelegate, UITableViewDataSource {
         cell.textLabel?.textColor = UIColor.white
         cell.backgroundColor = #colorLiteral(red: 0.1298420429, green: 0.1298461258, blue: 0.1298439503, alpha: 1)
         let toggle = UISwitch()
+        toggle.tag = indexPath.row
         toggle.addTarget(self, action: #selector(didTapToggle), for: .touchUpInside)
         cell.accessoryView = toggle
         return cell
     }
     
     @objc func didTapToggle(_ sender: UISwitch) {
+        let rowIndex = sender.tag
+        let labelText = optionsList[rowIndex]
+        DataManager.shared.didChangeSelection = true
         if sender.isOn {
-            print("on")
+            DataManager.shared.selectedTopicsList.append(labelText)
         } else {
-            print("off")
+            DataManager.shared.selectedTopicsList.remove(at: DataManager.shared.selectedTopicsList.firstIndex(of: labelText)!)
         }
     }
-    
-    
 }

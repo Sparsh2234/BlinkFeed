@@ -14,37 +14,54 @@ class MyNewsController: UIViewController {
     
     private let networkingManager = NetworkingManager()
     private var apiData: [ArticleItem] = []
+    private var currentTopicsList: [String] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         cardParentView.delegate = self
         cardParentView.dataSource = self
+    }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
         
-        // Fetch data from API
-        networkingManager.fetchData { result in
-            switch result {
-            case .success(let data):
-                if let apiData = try? JSONDecoder().decode(Article.self, from: data) {
-                    self.apiData = apiData.articles.filter { articleItem in
-                        guard let description = articleItem.description,
-                              let urlToImage = articleItem.urlToImage else {
-                            return false
-                        }
+        if DataManager.shared.didChangeSelection {
+            DataManager.shared.didChangeSelection = false
+            self.apiData = []
+            for keyword in DataManager.shared.selectedTopicsList {
+                networkingManager.fetchDataFor(keyword:keyword) { result in
+                    switch result {
+                    case .success(let data):
+                        var incomingData: [ArticleItem] = []
+                        if let apiData = try? JSONDecoder().decode(Article.self, from: data) {
+                            incomingData = apiData.articles.filter { articleItem in
+                                guard let description = articleItem.description,
+                                      let urlToImage = articleItem.urlToImage else {
+                                    return false
+                                }
+                                
+                                if description.count < 60 {
+                                    return false
+                                }
+                                return true
+                            }
+                            
+                            self.apiData.append(contentsOf: incomingData)
+                            self.apiData.shuffle()
+                            
+                            DispatchQueue.main.async {
+                                self.cardParentView.reloadData()
+                                self.cardParentView.resetCurrentCardIndex()
+                            }
                         
-                        if description.count < 60 {
-                            return false
+                        } else {
+                            print("Failed to parse API data")
                         }
-                        return true
+                    case .failure(let error):
+                        print("Error fetching data: \(error)")
                     }
-                    DispatchQueue.main.async {
-                        self.cardParentView.reloadData()
-                    }
-                
-                } else {
-                    print("Failed to parse API data")
                 }
-            case .failure(let error):
-                print("Error fetching data: \(error)")
             }
         }
     }
