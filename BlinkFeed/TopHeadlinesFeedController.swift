@@ -77,7 +77,6 @@ extension TopHeadlinesFeedController: KolodaViewDelegate, KolodaViewDataSource {
             cardParentView.revertAction()
             return false
         }
-        
         return true
     }
     
