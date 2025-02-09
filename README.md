@@ -1,6 +1,6 @@
 # BlinkFeed
 
-BlinkFeed is an modernized news app designed for Gen Z and upcoming generations with short attention spans. It provides quick news updates tailored to users' interests, ensuring they stay informed without wasting time.
+BlinkFeed is an modernized news app designed for those with short attention space :)
 
 ## Features
 
