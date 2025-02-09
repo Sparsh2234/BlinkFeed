@@ -1,6 +1,6 @@
 # BlinkFeed
 
-BlinkFeed is a modernized news app designed for those with short attention space :)
+BlinkFeed is a modernized news app designed for those with short attention spans :)
 
 ## Features
 
